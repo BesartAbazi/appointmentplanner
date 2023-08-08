@@ -24,9 +24,9 @@ export const ContactForm = ({
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type='text' value={name} onChange={changeName}/>
-            <input type='text' value={phone} onChange={changePhone}/>
-            <input type='text' value={email} onChange={changeEmail}/>
+            <label htmlFor="name">Name: </label> <input name="name" id="name" type='text' value={name} onChange={changeName}/>
+            <label htmlFor="phone">Phone: </label> <input name="phone" id="phone" type='text' value={phone} onChange={changePhone} pattern='[0-9]{2,}'/>
+            <label htmlFor="email">Email: </label> <input name="email" id="email" type='text' value={email} onChange={changeEmail}/>
             <button type='submit'>
                 Submit
             </button>
