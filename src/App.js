@@ -26,13 +26,14 @@ function App() {
     contacts and appointments
     */
     let [appointments, setAppointments] = useState([]);
-    const addAppointment = (name, contact, date) => {
+    const addAppointment = (name, contact, date, time) => {
         setAppointments((prev) => [
             ...prev,
             {
                 name: name,
                 contact: contact,
-                date: date
+                date: date,
+                time: time
             }
         ])
     }
